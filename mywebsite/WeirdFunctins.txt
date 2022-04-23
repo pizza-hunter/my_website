@@ -1,0 +1,4 @@
+- Button to change the styling of the entire page, into a couple of nice designs, and one really bad one
+- Element that Shows the current state of the moon, probably read data from some website and display whichever image of the moon lines up, or update dynamically with css objects
+- Element that shows what I'm currently listening to on spotify
+- Styled grid of favourite youtube videos/podcasts/books/albumns 
