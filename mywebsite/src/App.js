@@ -16,6 +16,10 @@ function App() {
           text="Hey I'm Hunter, a Software Engineer, designer, general web and technology enthusiast from Adelaide. Welcome to my humble ab code."
         />
         <TextBlock
+          className="text-left mt-20 text-xl underline"
+          text="CURRENTLY UNDER CONSTRUCTION!"
+        />
+        <TextBlock
           className="text-left mt-20 mb-10"
           text="Here's a showcase of some of my projects"
         />

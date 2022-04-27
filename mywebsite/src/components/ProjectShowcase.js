@@ -1,6 +1,4 @@
 import React from "react";
-import ReactCSSTransitionGroup from "react-transition-group";
-var ReactCSSTransitionGroup = require("react-transition-group"); // ES5 with npm
 
 let projects = [
   {
@@ -68,7 +66,9 @@ export class Project extends React.Component {
               }}
               className="text-white h-80 bg-cover bg-no-repeat bg-center grid content-center border-8 border-solid border-stone-800"
             >
-              <h1 className="text-xl md:text-2xl ">{this.props.description}</h1>
+              <h1 className="text-xl text-center px-3 md:text-2xl ">
+                {this.props.description}
+              </h1>
             </div>
           </div>
         ) : (
@@ -82,7 +82,9 @@ export class Project extends React.Component {
               }}
               className="text-white h-80 bg-cover bg-no-repeat bg-center grid content-center border-8 border-solid border-stone-400"
             >
-              <h1 className="text-2xl md:text-4xl ">{this.props.name}</h1>
+              <h1 className="text-2xl text-center md:text-4xl ">
+                {this.props.name}
+              </h1>
             </div>
           </div>
         )}
