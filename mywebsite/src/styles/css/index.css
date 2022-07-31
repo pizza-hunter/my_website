@@ -2,17 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @font-face {
   font-family: plusJakarta;
-  src: url('../fonts/PlusJakartaSans-VariableFont_wght.ttf') format('PlusJakartaSans-Italic-VariableFont_wght.ttf');
+  src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf")
+    format("PlusJakartaSans-Italic-VariableFont_wght.ttf");
 }
 
 body {
   margin: 0;
-  font-family: plusJakarta,-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: plusJakarta, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -21,35 +21,46 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+.navbar a li {
+  padding-left: 20px;
+}
 .nav-item {
- background-color: red;
- padding: 15px;
+  background-color: red;
+  padding: 15px;
 }
 
-.App{
+.App {
   /* background-color: aqua; */
 }
 
 /* ["basic", "light", "dark", "blue", "funky", "lakers"], */
 .basic {
-  background-color: rgba(3, 7, 1, 0.89);
+  background-color: rgb(44, 54, 57);
   color: white;
+}
+.basic-light {
+  background-color: rgb(63, 78, 79);
+}
+.basic-accent {
+  background-color: rgb(162, 123, 92);
+}
+.basic-highlight {
+  background-color: rgb(220, 215, 201);
 }
 .light {
   background-color: white;
   color: black;
 }
 .dark {
-  background-color:black;
+  background-color: black;
   color: white;
 }
 .blue {
-  background-color:blue;
-  color: lightblue
+  background-color: blue;
+  color: lightblue;
 }
 .funky {
   background-color: yellowgreen;
