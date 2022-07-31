@@ -8,9 +8,7 @@ export class Header extends React.Component {
   render() {
     return (
       <div className="">
-        <h1 className="text-left text-6xl mt-7 pb-5 font-semibold">
-          {this.props.title}
-        </h1>
+        <h1 className="text-6xl font-semibold">{this.props.title}</h1>
       </div>
     );
   }
