@@ -15,6 +15,26 @@ let projects = [
     image: "./images/STRmix1.png",
     alt: "STRmix entry page",
   },
+  {
+    name: "Recipe Mate",
+    description: "An android app that allows you to create and store recipes",
+    image: "./images/RecipeMate02.jpg",
+    alt: "Recipe creation screen",
+  },
+  {
+    name: "Pizza Dough calcuator",
+    description:
+      "An android app of a simple reference calculator for ingredients proportions when making pizza dough",
+    image: "./images/PizzaDoughCalc.jpg",
+    alt: "Pizza Dough calcuator",
+  },
+  {
+    name: "Calculator",
+    description:
+      "Flutter app of a calculator for basic addition, subraction, multiplication and division",
+    image: "./images/Calculator.jpg",
+    alt: "Calcuator",
+  },
 ];
 export class ProjectShowcase extends React.Component {
   render() {
