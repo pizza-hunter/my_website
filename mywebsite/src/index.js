@@ -6,7 +6,6 @@ import NoPage from "./pages/NoPage";
 import CoolStuff from "./pages/CoolStuff";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
-import "./styles/css/App.css";
 import "./styles/css/index.css";
 
 export default function App() {
