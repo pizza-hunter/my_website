@@ -70,3 +70,18 @@ code {
   background-color: purple;
   color: yellow;
 }
+#title-wrap span {
+  transition: all 0.5s ease;
+}
+#title-wrap:hover .h-t-l {
+  color: rgb(63, 78, 79);
+  font-size: 1.05em;
+}
+#title-wrap:hover .h-t-a {
+  color: rgb(162, 123, 92);
+  font-size: 1.05em;
+}
+#title-wrap:hover .h-t-h {
+  color: rgb(220, 215, 201);
+  font-size: 1.05em;
+}

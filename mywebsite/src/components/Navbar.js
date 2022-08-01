@@ -28,6 +28,18 @@ class MobileNavbar extends React.Component {
     const visible = this.state.visible;
     let nav;
     var activeV = this.state.visible ? "is-active" : "";
+    const title = "Hunter Green";
+    let titleSpans = [];
+    for (let i = 0; i < title.length; i++) {
+      let titleSpan;
+      i % 3 == 0
+        ? (titleSpan = "l")
+        : i % 3 == 1
+        ? (titleSpan = "a")
+        : (titleSpan = "h");
+
+      titleSpans[i] = <span className={"h-t-" + titleSpan}>{title[i]}</span>;
+    }
     let button = <ToggleButton onClick={this.toggle} active={activeV} />;
     let navItems = (
       <ul className="">
@@ -51,10 +63,10 @@ class MobileNavbar extends React.Component {
     }
     return (
       <div className="flex justify-between">
-        <div>
+        <div id="title-wrap">
           <Link to="/">
-            <h1 className="p-3 text-6xl font-semibold pt-10 md:whitespace-nowrap">
-              Hunter Green
+            <h1 className="p-3 text-6xl font-semibold pt-10 md:whitespace-nowrap hover:text-basic-a duration-300">
+              {titleSpans}
             </h1>
           </Link>
         </div>
