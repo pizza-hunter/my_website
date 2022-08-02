@@ -70,18 +70,74 @@ code {
   background-color: purple;
   color: yellow;
 }
-#title-wrap span {
-  transition: all 0.5s ease;
+
+/* #title-wrap {
+  color: white;
+  text-decoration: none;
+  background-image: linear-gradient(rgb(44, 54, 57), rgb(44, 54, 57)),
+    linear-gradient(rgb(162, 123, 92), rgb(162, 123, 92));
+  background-size: 100% 2px, 100% 2px;
+  background-position: 100% 100%, 0% 100%;
+  background-repeat: no-repeat, no-repeat;
+  border-radius: 2px;
+  transition: background-size 0.8s linear;
+}
+#title-wrap:hover {
+  background-size: 0 2px, 100% 2px;
+} */
+/* #title-wrap:hover span {
+  background-color: rgba(0, 0, 0, 0.3);
+} */
+#title-wrap span:first-child {
+  transition: all 0.2s ease;
+  border-radius: 10px 0px 0px 10px;
+}
+#title-wrap span:nth-child(2) {
+  transition: all 0.4s ease;
+}
+#title-wrap span:nth-child(3) {
+  transition: all 0.6s ease;
+}
+#title-wrap span:nth-child(4) {
+  transition: all 0.8s ease;
+}
+#title-wrap span:nth-child(5) {
+  transition: all 1s ease;
+}
+#title-wrap span:nth-child(6) {
+  transition: all 1.2s ease;
+}
+#title-wrap span:nth-child(7) {
+  transition: all 1.3s ease;
+}
+#title-wrap span:nth-child(8) {
+  transition: all 1.4s ease;
+}
+#title-wrap span:nth-child(9) {
+  transition: all 1.6s ease;
+}
+#title-wrap span:nth-child(10) {
+  transition: all 1.8s ease;
+}
+#title-wrap span:nth-child(11) {
+  transition: all 2s ease;
+}
+#title-wrap span:nth-child(12) {
+  transition: all 2.2s ease;
+  border-radius: 0px 10px 10px 0px;
 }
 #title-wrap:hover .h-t-l {
   color: rgb(63, 78, 79);
-  font-size: 1.05em;
 }
 #title-wrap:hover .h-t-a {
   color: rgb(162, 123, 92);
-  font-size: 1.05em;
 }
 #title-wrap:hover .h-t-h {
   color: rgb(220, 215, 201);
-  font-size: 1.05em;
+}
+#pageHeader::after {
+  width: 120px;
+  height: 20px;
+  background-color: white;
+  content: " ";
 }

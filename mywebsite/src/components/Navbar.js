@@ -65,7 +65,10 @@ class MobileNavbar extends React.Component {
       <div className="flex justify-between">
         <div id="title-wrap">
           <Link to="/">
-            <h1 className="p-3 text-6xl font-semibold pt-10 md:whitespace-nowrap hover:text-basic-a duration-300">
+            <h1
+              id="pageHeader"
+              className="text-6xl font-semibold pt-10 md:whitespace-nowrap duration-500 md:hover:-translate-y-1 "
+            >
               {titleSpans}
             </h1>
           </Link>
@@ -95,14 +98,14 @@ const NavItem = (props) => {
 
 const ToggleButton = (props) => {
   return (
-    <div className="basic-accent fixed top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
+    <div className="bg-basic-a fixed top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
       <button
-        className={"text-basic-h hamburger hamburger--collapse " + props.active}
+        className={"hamburger hamburger--collapse " + props.active}
         type="button"
         onClick={props.onClick}
       >
         <span className="hamburger-box">
-          <span className="hamburger-inner text-basic-h"></span>
+          <span className="hamburger-inner"></span>
         </span>
       </button>
     </div>
