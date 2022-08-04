@@ -1,4 +1,3 @@
-import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
@@ -7,6 +6,7 @@ import CoolStuff from "./pages/CoolStuff";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import "./styles/css/index.css";
+import { createRoot } from "react-dom/client";
 
 export default function App() {
   return (
@@ -24,4 +24,6 @@ export default function App() {
   );
 }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+const container = document.getElementById("root");
+const root = createRoot(container);
+root.render(<App />);

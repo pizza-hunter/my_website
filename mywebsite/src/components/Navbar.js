@@ -32,9 +32,9 @@ class MobileNavbar extends React.Component {
     let titleSpans = [];
     for (let i = 0; i < title.length; i++) {
       let titleSpan;
-      i % 3 == 0
+      i % 3 === 0
         ? (titleSpan = "l")
-        : i % 3 == 1
+        : i % 3 === 1
         ? (titleSpan = "a")
         : (titleSpan = "h");
 
@@ -50,7 +50,7 @@ class MobileNavbar extends React.Component {
     );
     if (visible) {
       nav = (
-        <div className="w-52 text-3xl h-screen fixed z-10 top-0 right-0 overflow-x-hidden duration-500 basic-light pt-20 pl-5">
+        <div className="w-52 text-3xl h-screen fixed z-10 top-0 right-0 overflow-x-hidden duration-500 bg-basic-l pt-20 pl-5">
           {navItems}
         </div>
       );
@@ -62,7 +62,7 @@ class MobileNavbar extends React.Component {
       );
     }
     return (
-      <div className="flex justify-between">
+      <div className="flex justify-between pb-10">
         <div id="title-wrap">
           <Link to="/">
             <h1
@@ -86,7 +86,7 @@ const NavItem = (props) => {
   return (
     <div className="pt-3 md:inline-block md:pt-0 md:overflow-hidden">
       <Link to={props.link}>
-        <div className=" pt-2 pb-1 pl-5 pr-4 hover:bg-basic rounded-md md:pt-0 md:pb-2 md:hover:bg-basic-l md:hover:translate-y-2 md:duration-300">
+        <div className=" pt-2 pb-1 pl-5 pr-4 hover:bg-basic rounded-md md:pt-0 md:pb-2 md:hover:bg-basic-l md:hover:bg-opacity-20 md:hover:translate-y-2 md:duration-300">
           <li className="ease-in duration-600 border-b-2 border-b-slate-200 md:border-none md:text-2xl lg:text-3xl">
             {props.text}
           </li>
