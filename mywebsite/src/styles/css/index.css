@@ -38,7 +38,8 @@ code {
 
 /* ["basic", "light", "dark", "blue", "funky", "lakers"], */
 .basic {
-  background-color: rgb(44, 54, 57);
+  /* background-color: rgb(44, 54, 57); */
+  background-color: #355e3b;
   color: white;
 }
 .basic-light {
@@ -127,13 +128,13 @@ code {
   border-radius: 0px 10px 10px 0px;
 }
 #title-wrap:hover .h-t-l {
-  color: rgb(63, 78, 79);
+  color: #8acb88;
 }
 #title-wrap:hover .h-t-a {
-  color: rgb(162, 123, 92);
+  color: #e4fde1;
 }
 #title-wrap:hover .h-t-h {
-  color: rgb(220, 215, 201);
+  color: #dba159;
 }
 #pageHeader::after {
   width: 120px;

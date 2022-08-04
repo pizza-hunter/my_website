@@ -3,10 +3,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        basic: "#2C3639",
-        "basic-l": "#3F4E4F",
-        "basic-a": "#A27B5C",
-        "basic-h": "#DCD7C9",
+        basic: "#355e3b",
+        "basic-l": "#8ACB88",
+        "basic-a": "#E4FDE1",
+        "basic-h": "#DBA159",
+        "basic-y": "#FFBF46",
       },
     },
   },
