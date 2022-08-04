@@ -7,10 +7,8 @@ const Layout = () => {
   return (
     <>
       <Navbar />
-      <br></br>
-      <br></br>
-      <br></br>
       <Outlet />
+      {/*TODO: Create <Footer /> */}
     </>
   );
 };
