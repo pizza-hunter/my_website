@@ -7,6 +7,8 @@ import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import "./styles/css/index.css";
 import { createRoot } from "react-dom/client";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faAt } from "@fortawesome/free-solid-svg-icons";
 
 export default function App() {
   return (
@@ -24,6 +26,7 @@ export default function App() {
   );
 }
 
+library.add(faAt);
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App />);
