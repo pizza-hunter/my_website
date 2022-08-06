@@ -38,7 +38,11 @@ class MobileNavbar extends React.Component {
         ? (titleSpan = "a")
         : (titleSpan = "h");
 
-      titleSpans[i] = <span className={"h-t-" + titleSpan}>{title[i]}</span>;
+      titleSpans[i] = (
+        <span key={i} className={"h-t-" + titleSpan}>
+          {title[i]}
+        </span>
+      );
     }
     let button = <ToggleButton onClick={this.toggle} active={activeV} />;
     let navItems = (
