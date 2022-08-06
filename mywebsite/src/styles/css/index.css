@@ -142,3 +142,20 @@ code {
   background-color: white;
   content: " ";
 }
+#job-task-list li::marker {
+  color: #dba159;
+  content: "➤";
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.active-job-tab {
+  background-color: #dba159;
+  transition: all;
+  transition-duration: 400ms;
+}
