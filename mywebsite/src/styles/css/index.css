@@ -159,3 +159,7 @@ code {
   transition: all;
   transition-duration: 400ms;
 }
+#accordionBody {
+  transition: opacity 0.5s;
+  opacity: 1;
+}

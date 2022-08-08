@@ -35,7 +35,7 @@ class JobTabs extends React.Component {
       );
     });
     return (
-      <div className="px-3 md:flex">
+      <div className="md:flex">
         <div
           id="accordionNav"
           className="flex border-b-2 border-b-basic-h md:block md:border-b-0 md:border-r-2 md:border-r-basic-h"
