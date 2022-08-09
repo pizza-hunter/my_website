@@ -163,3 +163,7 @@ code {
   transition: opacity 0.5s;
   opacity: 1;
 }
+
+mark {
+  background: none;
+}
