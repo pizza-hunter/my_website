@@ -55,8 +55,10 @@ function Home() {
         </div>
       </div>
       <div className="pt-10">
-        <h1 className="text-3xl">Check out my CV</h1>
-        <FileButtonLink text="Resume" link="HunterGreen.pdf" />
+        <h1 className="text-2xl">Check out my CV</h1>
+        <div className="pt-5">
+          <FileButtonLink text="Resume" link="HunterGreen.pdf" />
+        </div>
       </div>
 
       <div className="pt-10 mt-16">
