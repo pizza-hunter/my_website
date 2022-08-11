@@ -72,7 +72,7 @@ class JobHeader extends React.Component {
       <div
         className={
           this.props.active +
-          " bg-basic-l bg-opacity-70 text-basic-a text-lg py-1 px-5 mr-1 rounded-t-lg md:mr-0 md:mb-1 md:rounded-t-none md:rounded-l-lg md:py-1"
+          " bg-basic-l text-basic-a text-lg py-1 px-5 mr-1 rounded-t-lg md:mr-0 md:mb-1 md:rounded-t-none md:rounded-l-lg md:py-1"
         }
       >
         <button value={this.props.value} onClick={this.props.onHeaderClick}>
@@ -107,10 +107,7 @@ const JobBody = (props) => {
         </h3>
       </div>
       <h6 className="text-sm self-end py-2">{props.period}</h6>
-      <ul
-        id="job-task-list"
-        className="pl-5 relative border-t-2 border-basic-l text-md"
-      >
+      <ul id="job-task-list" className="pl-5 border-t-2 border-basic-l text-md">
         {tasks}
       </ul>
     </div>

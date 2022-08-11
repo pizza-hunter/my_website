@@ -2,15 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "hamburgers/dist/hamburgers.css";
 
-function Navbar2() {
-  return (
-    <nav className="">
-      <MobileNavbar />
-    </nav>
-  );
-}
-
-class MobileNavbar extends React.Component {
+class Navbar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,6 +22,7 @@ class MobileNavbar extends React.Component {
     var activeV = this.state.visible ? "is-active" : "";
     const title = "Hunter Green";
     let titleSpans = [];
+    // Coloured Title
     for (let i = 0; i < title.length; i++) {
       let titleSpan;
       i % 3 === 0
@@ -52,40 +45,43 @@ class MobileNavbar extends React.Component {
         <NavItem link="/coolstuff" text="Cool Stuff" />
       </ul>
     );
+    // Condition for showing/hiding nav in mobile view
     if (visible) {
       nav = (
-        <div className="w-52 text-3xl h-screen fixed z-10 top-0 right-0 overflow-x-hidden duration-500 bg-basic-l pt-20 pl-5">
+        <div className="w-52 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 bg-basic-l pt-20 pl-5">
           {navItems}
         </div>
       );
     } else {
       nav = (
-        <div className="w-0 text-3xl h-screen fixed z-10 top-0 right-0 overflow-x-hidden duration-500 md:inline-block md:self-end md:px-2 md:mx-2 md:text-xl md:relative md:w-auto md:h-auto">
+        <div className="w-0 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 md:inline-block md:self-end md:px-2 md:mx-2 md:text-xl md:relative md:w-auto md:h-auto">
           {navItems}
         </div>
       );
     }
     return (
-      <div className="flex justify-between pb-10">
-        <div id="title-wrap">
-          <Link to="/">
-            <h1
-              id="pageHeader"
-              className="text-6xl font-semibold pt-10 md:whitespace-nowrap duration-500 md:hover:-translate-y-1 "
-            >
-              {titleSpans}
-            </h1>
-          </Link>
+      <nav>
+        <div className="flex justify-between pb-10">
+          <div id="title-wrap">
+            <Link to="/">
+              <h1
+                id="pageHeader"
+                className="text-6xl font-semibold pt-10 md:whitespace-nowrap duration-500 md:hover:-translate-y-1 "
+              >
+                {titleSpans}
+              </h1>
+            </Link>
+          </div>
+          <div className="text-right fixed right-0 md:flex md:justify-between md:text-center md:relative md:h-auto">
+            {button}
+            {nav}
+          </div>
         </div>
-        <div className="text-right fixed right-0 md:flex md:justify-between md:text-center md:relative md:h-auto">
-          {button}
-          {nav}
-        </div>
-      </div>
+      </nav>
     );
   }
 }
-
+// Individual Nav tab
 const NavItem = (props) => {
   return (
     <div className="pt-3 md:inline-block md:pt-0 md:overflow-hidden">
@@ -100,6 +96,7 @@ const NavItem = (props) => {
   );
 };
 
+// Mobile Nav tab toggle visibility button
 const ToggleButton = (props) => {
   return (
     <div className="bg-basic-a fixed top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
@@ -116,4 +113,4 @@ const ToggleButton = (props) => {
   );
 };
 
-export default Navbar2;
+export default Navbar;
