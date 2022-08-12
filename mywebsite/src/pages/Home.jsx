@@ -1,6 +1,6 @@
 import React from "react";
 import JobTabs from "../components/JobTabs";
-import FileButtonLink from "../components/FileButtonLink";
+import ButtonLink from "../components/ButtonLink";
 const jobs = [
   {
     shortName: "Blis",
@@ -30,88 +30,109 @@ const jobs = [
 ];
 
 function Home() {
-  // return (
-  //
-  // );
-
   return (
     <div className="px-1">
-      <div className="flex justify-between mt-10">
-        <div className="md:w-1/2">
+      <div className="md:flex md:justify-center mt-10">
+        <div className="md:w-3/4">
           <h1 className="text-3xl text-basic-h">Hi, I'm Hunter.</h1>
           <p className="pt-8">
             I'm a Developer from Adelaide, South Australia and Software
             Engineering (Hons) graduate from the University of South Australia,
-            2021.
+            2021. I'm mostly experienced in Web Development, but I'm also keenly
+            interested in software engineering.
           </p>
         </div>
       </div>
-      <div className="pt-10 mt-16">
-        <h1 className="text-3xl text-basic-a">My Experience</h1>
-        <div className="pt-3">
-          <div className="pt-5">
-            <JobTabs jobs={jobs} />
+      <div className="pt-10 md:flex md:justify-center">
+        <div className="md:w-3/4">
+          <h1 className="text-3xl text-basic-a">My Experience</h1>
+          <div className="pt-3">
+            <div className="pt-5">
+              <JobTabs jobs={jobs} />
+            </div>
           </div>
         </div>
       </div>
-      <div className="pt-10">
-        <h1 className="text-2xl">Check out my CV</h1>
-        <div className="pt-5">
-          <FileButtonLink text="Resume" link="HunterGreen.pdf" />
+      <div className="pt-10 md:flex md:justify-center">
+        <div className="md:w-3/4">
+          <h1 className="text-2xl">Check out my CV</h1>
+          <p className="pt-2 text-xs">Updated as of 8/22</p>
+          <div className="pt-5 flex justify-center">
+            <ButtonLink text="Resume" link="HunterGreen.pdf" />
+          </div>
         </div>
       </div>
 
-      <div className="pt-10 mt-16">
-        <div className="flex justify-between">
-          <h1 className="text-3xl">More about me</h1>
-          <img
-            className="w-20 h-20 rounded-full opacity-80 border-2"
-            src="./images/profilepic.jpg"
-            alt="Hunter Green profile shot"
-          ></img>
-        </div>
-        <div className="pt-5">
-          <div className="flex">
-            <h1>
-              I've always enjoyed creating things{" "}
-              <mark className="text-basic-h italic opacity-75">
-                (my primary school books had more doodles than words)
-              </mark>
-              , and computers and the web have always interested me starting off
-              with Runescape and customising my MySpace page{" "}
-              <mark className="text-basic-h italic opacity-75">
-                (no you cannot see it)
-              </mark>
-              .
-            </h1>
+      <div className="pt-10 mt-16  md:flex md:justify-center">
+        <div className="md:w-3/4">
+          <div className="flex justify-between">
+            <h1 className="text-3xl">More about me</h1>
+            <img
+              className="w-20 h-20 rounded-full  border-2"
+              src="./images/profilepic.jpg"
+              alt="Hunter Green profile shot"
+            ></img>
           </div>
-          <div className="pt-10">
-            <p>
-              I love Web Development and enjoy working with{" "}
-              <a className="text-basic-l" href="https://www.djangoproject.com/">
-                Django
-              </a>{" "}
-              and{" "}
-              <a className="text-basic-l" href="https://reactjs.org/">
-                React
-              </a>
-              . App development is something I'd like to experiment more with,
-              recently I have been trying out{" "}
-              <a className="text-basic-l" href="https://flutter.dev/">
-                Flutter
-              </a>{" "}
-              Outside of work I watch movies, cook mostly curry and pasta,
-              listen to music, play games, and play semi-amatuer tennis.{" "}
-              <mark className="text-basic-l italic opacity-75">
-                <a href="/coolStuff">Some of my favourites can be found here</a>
-              </mark>
-            </p>
+          <div className="pt-5">
+            <div className="flex">
+              <h1>
+                I've always enjoyed creating things{" "}
+                <mark className="text-basic-h italic ">
+                  (my primary school books had more doodles than words)
+                </mark>
+                , and computers and the web have always interested me starting
+                off with Runescape and customising my MySpace page{" "}
+                <mark className="text-basic-h italic ">
+                  (no you cannot see it)
+                </mark>
+                .
+              </h1>
+            </div>
+            <div className="pt-10">
+              <p>
+                I love Web Development and enjoy working with{" "}
+                <a
+                  className="text-basic-l"
+                  href="https://www.djangoproject.com/"
+                >
+                  Django
+                </a>{" "}
+                and{" "}
+                <a className="text-basic-l" href="https://reactjs.org/">
+                  React
+                </a>
+                . App development is something I'd like to experiment more with,
+                recently I have been trying out{" "}
+                <a className="text-basic-l" href="https://flutter.dev/">
+                  Flutter
+                </a>{" "}
+                Outside of work I watch movies, cook mostly curry and pasta,
+                listen to music, play games, and play semi-amatuer tennis.{" "}
+                <mark className="text-basic-l italic ">
+                  <a href="/coolStuff">
+                    Some of my favourites can be found here
+                  </a>
+                </mark>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div className="pt-10">
-        <h1 className="text-3xl">Contact Me</h1>
-        How to contact me<button className="bg-black">Hit me up</button>
+      <div className="pt-10 md:flex md:justify-center">
+        <div className="md:w-3/4">
+          <h1 className="text-3xl">Contact Me</h1>
+          <p className="pt-5">
+            I'm currently looking for a permenant role in software engineering
+            or web development. My Inbox is always open if you have any
+            questions or just want to say hi.
+          </p>
+          <div className="pt-5 flex justify-center">
+            <ButtonLink
+              text="Hit me up"
+              link="mailto:huntergreenaus@gmail.com"
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
