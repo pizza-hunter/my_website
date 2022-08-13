@@ -33,7 +33,7 @@ const jobs = [
 function Home() {
   return (
     <div className="md:flex md:justify-center ">
-      <div className="px-1 md:w-3/4 bg-basic-l bg-opacity-20 rounded-lg">
+      <div className="px-1 md:w-3/4 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
         <ContentBlock
           header="Hi, I'm Hunter"
           headerClasses="text-basic-h text-3xl"
@@ -47,18 +47,18 @@ function Home() {
         <JobTabs jobs={jobs} />
         <ContentBlock
           header="Check out my CV"
-          headerClasses="text-2xl"
+          headerClasses="text-3xl text-center pt-5"
           text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
-          textClasses=" pt-5"
+          textClasses="text-center pt-5"
         />
         <div className="pt-8 flex justify-center">
           <ButtonLink text="Resume" link="HunterGreen.pdf" />
         </div>
 
-        <div className="pt-10 mt-16  md:flex md:justify-center">
+        <div className="pt-10 md:flex md:justify-center">
           <div className="">
             <div className="flex justify-between">
-              <h1 className="text-3xl">More about me</h1>
+              <h1 className="text-3xl text-center">More about me</h1>
               <img
                 className="w-20 h-20 rounded-full  border-2"
                 src="./images/profilepic.jpg"

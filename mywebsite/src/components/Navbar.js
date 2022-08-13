@@ -26,7 +26,7 @@ class Navbar extends React.Component {
     for (let i = 0; i < title.length; i++) {
       let titleSpan;
       i % 3 === 0
-        ? (titleSpan = "l")
+        ? (titleSpan = "")
         : i % 3 === 1
         ? (titleSpan = "a")
         : (titleSpan = "h");
