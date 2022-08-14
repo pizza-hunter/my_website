@@ -21,7 +21,9 @@ body {
     rgba(53, 94, 59, 1) 35%,
     rgba(138, 203, 136, 1) 100%
   );
+  background-repeat: no-repeat;
   color: white;
+  min-height: 100vh;
 }
 #root {
   max-width: 1248px;
