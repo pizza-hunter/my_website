@@ -33,7 +33,7 @@ const jobs = [
 function Home() {
   return (
     <div className="md:flex md:justify-center ">
-      <div className="px-1 md:w-3/4 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
+      <div className="px-3 md:w-3/4 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
         <ContentBlock
           header="Hi, I'm Hunter"
           headerClasses="text-basic-h text-3xl"
