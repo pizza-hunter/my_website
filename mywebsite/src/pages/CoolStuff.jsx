@@ -1,9 +1,14 @@
-import React from 'react';
+import React from "react";
 
 function CoolStuff() {
-    return (
-        <h1>Random cool junk</h1>
-    );
+  return (
+    <div>
+      <h1>Movies</h1>
+      <h1>Games</h1>
+      <h1>Articles</h1>
+      <h1>Books</h1>
+    </div>
+  );
 }
 
 export default CoolStuff;
