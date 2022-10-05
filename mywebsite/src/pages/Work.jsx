@@ -1,59 +1,8 @@
-import React from 'react';
+import React from "react";
+import { ProjectShowcase } from "../components/ProjectShowcase";
 
 function Work() {
-    return (
-        <div>
-
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        <h1>this is the Work</h1>
-        </div>
-    );
+  return <ProjectShowcase />;
 }
 
 export default Work;
