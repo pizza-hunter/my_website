@@ -56,7 +56,7 @@ export class ProjectShowcase extends React.Component {
         />
       );
     }
-    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">{items}</div>;
+    return <div className="grid grid-cols-1 gap-2 py-10">{items}</div>;
   }
 }
 
@@ -79,7 +79,7 @@ export class Project extends React.Component {
       <div
         onMouseEnter={this.handleHolverEnter}
         onMouseLeave={this.handleHolverLeave}
-        className="m-4"
+        className="pt-4"
       >
         {this.state.hidden ? (
           <div>
