@@ -46,16 +46,18 @@ function Home() {
         <ContentBlock header="My Experience" />
         <JobTabs jobs={jobs} />
         <ContentBlock
+          blockClasses="pt-10"
           header="Check out my CV"
           headerClasses="text-3xl text-center pt-5"
           text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
           textClasses="text-center pt-5"
         />
-        <div className="pt-8 flex justify-center">
+        <div className="py-8 flex justify-evenly">
           <ButtonLink text="Resume" link="HunterGreen.pdf" />
+          <ButtonLink text="GitHub" link="https://github.com/pizza-hunter" />
         </div>
 
-        <div className="pt-10 md:flex md:justify-center">
+        <div className="pt-16 md:flex md:justify-center">
           <div className="">
             <div className="flex justify-between">
               <h1 className="text-3xl text-center">More about me</h1>
@@ -112,8 +114,7 @@ function Home() {
         </div>
         <ContentBlock
           header="Contact Me"
-          text="I'm currently looking for a permenant role in software engineering
-        or web development. My Inbox is always open if you have any
+          text="I'm not currently looking for work at the moment but my inbox is always open if you have any
         questions or just want to say hi."
         />
         <div className="py-8 flex justify-center">
