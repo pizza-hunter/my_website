@@ -67,6 +67,7 @@ class Navbar extends React.Component {
     if (visible) {
       nav = (
         <div className="w-52 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 bg-basic-l pt-20 pl-5">
+          <NavItem link="/" text="Home" />
           {navItems}
         </div>
       );
@@ -108,7 +109,7 @@ const NavItem = (props) => {
     <div className="pt-3 md:inline-block md:pt-0 md:overflow-hidden">
       <Link to={props.link}>
         <div className=" pt-2 pb-1 pl-5 pr-4 hover:bg-basic rounded-md md:pt-0 md:pb-2 md:hover:bg-basic-l md:hover:bg-opacity-20 md:hover:translate-y-2 md:duration-300">
-          <li className="ease-in duration-600 border-b-2 border-b-slate-200 md:border-none md:text-2xl lg:text-3xl">
+          <li className="ease-in duration-600 border-b-2 border-b-slate-200 md:border-none md:text-2xl lg:text-3xl list-none">
             {props.text}
           </li>
         </div>
