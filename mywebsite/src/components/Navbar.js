@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "hamburgers/dist/hamburgers.css";
 
@@ -8,6 +8,24 @@ class Navbar extends React.Component {
     this.state = {
       visible: false,
     };
+    this.wrapperRef = React.createRef();
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener("mousedown", this.handleClickOutside);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("mousedown", this.handleClickOutside);
+  }
+
+  handleClickOutside(e) {
+    if (this.wrapperRef && !this.wrapperRef.current.contains(e.target)) {
+      this.setState({
+        visible: false,
+      });
+    }
   }
 
   toggle = () => {
@@ -72,7 +90,10 @@ class Navbar extends React.Component {
               </h1>
             </Link>
           </div>
-          <div className="text-right fixed right-0 md:flex md:justify-between md:text-center md:relative md:h-auto">
+          <div
+            ref={this.wrapperRef}
+            className="text-right fixed right-0 md:flex md:justify-between md:text-center md:relative md:h-auto"
+          >
             {button}
             {nav}
           </div>
