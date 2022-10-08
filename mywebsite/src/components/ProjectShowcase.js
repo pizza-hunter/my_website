@@ -52,6 +52,7 @@ export class ProjectShowcase extends React.Component {
           name={projects[i].name}
           description={projects[i].description}
           image={projects[i].image}
+          alt={projects[i].alt}
         />
       );
     }
@@ -83,6 +84,7 @@ export class Project extends React.Component {
         {this.state.hidden ? (
           <div>
             <div
+              alt={this.props.alt}
               style={{
                 backgroundImage:
                   "linear-gradient(to bottom, rgba(0, 0, 0, 0.885), rgba(0, 0, 0, 0.885)),url(" +
@@ -99,6 +101,7 @@ export class Project extends React.Component {
         ) : (
           <div>
             <div
+              alt={this.props.alt}
               style={{
                 backgroundImage:
                   "linear-gradient(to bottom, rgba(0, 0, 0, 0.585), rgba(0, 0, 0, 0.585)),url(" +
