@@ -2,6 +2,13 @@ import React from "react";
 
 let projects = [
   {
+    name: "Signature Shower Screens",
+    description:
+      "Rehaul of a shower screen and wardrobes business, designed in figma and developed in wordpress",
+    image: "./images/sss.jpg",
+    alt: "Signature Shower Screens and Wardrobes homepage hero",
+  },
+  {
     name: "LR Display",
     description:
       "LR (Likelihood Ratio) Display tool, determines the likelihood that a crime scene DNA sample and a sample taken from a potential suspect match. The tool generates a report detailing run information and two graphs for data interpretation.",
