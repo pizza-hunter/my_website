@@ -2,6 +2,13 @@ import React from "react";
 
 let projects = [
   {
+    name: "Signature Shower Screens",
+    description:
+      "Rehaul of a shower screen and wardrobes business, designed in figma and developed in wordpress",
+    image: "./images/sss.jpg",
+    alt: "Signature Shower Screens and Wardrobes homepage hero",
+  },
+  {
     name: "LR Display",
     description:
       "LR (Likelihood Ratio) Display tool, determines the likelihood that a crime scene DNA sample and a sample taken from a potential suspect match. The tool generates a report detailing run information and two graphs for data interpretation.",
@@ -45,10 +52,11 @@ export class ProjectShowcase extends React.Component {
           name={projects[i].name}
           description={projects[i].description}
           image={projects[i].image}
+          alt={projects[i].alt}
         />
       );
     }
-    return <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">{items}</div>;
+    return <div className="grid grid-cols-1 gap-2 py-10">{items}</div>;
   }
 }
 
@@ -71,11 +79,12 @@ export class Project extends React.Component {
       <div
         onMouseEnter={this.handleHolverEnter}
         onMouseLeave={this.handleHolverLeave}
-        className="m-4"
+        className="pt-4"
       >
         {this.state.hidden ? (
           <div>
             <div
+              alt={this.props.alt}
               style={{
                 backgroundImage:
                   "linear-gradient(to bottom, rgba(0, 0, 0, 0.885), rgba(0, 0, 0, 0.885)),url(" +
@@ -92,6 +101,7 @@ export class Project extends React.Component {
         ) : (
           <div>
             <div
+              alt={this.props.alt}
               style={{
                 backgroundImage:
                   "linear-gradient(to bottom, rgba(0, 0, 0, 0.585), rgba(0, 0, 0, 0.585)),url(" +
