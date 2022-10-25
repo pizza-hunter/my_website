@@ -191,3 +191,20 @@ code {
 mark {
   background: none;
 }
+
+/* h1 {
+  animation: test 3.5s steps(40, end);
+}
+
+@keyframes test {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.h1c {
+  animation: 1s ease-out 0s 1 test;
+} */
