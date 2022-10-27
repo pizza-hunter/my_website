@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-
+// TODO: Fix jumping increment, sometimes skips forward or back if clicking too fast
+// potentially coudld try to invoke a blocking period during future animation
 export class Carousel extends React.Component {
   constructor(props) {
     super(props);
@@ -28,22 +30,22 @@ export class Carousel extends React.Component {
   render() {
     return (
       <div>
-        <div>
-          <button
-            className="bg-white h-8 w-8 text-black ml-2"
-            onClick={this.handleIncrement}
-          >
-            +
-          </button>
-          <button
-            className="bg-white h-8 w-8 text-black ml-2"
-            onClick={this.handleDecrement}
-          >
-            -
-          </button>
-        </div>
         <div className="flex justify-center">
           <div className="">{this.state.slides[this.state.index]}</div>
+        </div>
+        <div className="flex w-full text-5xl justify-center align-middle text-center carousel_arrows">
+          <div
+            className="w-full border-2 border-t-0 py-3 carousel_left_arrow"
+            onClick={this.handleIncrement}
+          >
+            <FontAwesomeIcon icon="arrow-left-long" className="" />
+          </div>
+          <div
+            className="w-full border-2 border-t-0 border-l-0 py-3 carousel_right_arrow"
+            onClick={this.handleDecrement}
+          >
+            <FontAwesomeIcon icon="arrow-right-long" className="" />
+          </div>
         </div>
       </div>
     );

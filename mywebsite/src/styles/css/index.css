@@ -191,20 +191,19 @@ code {
 mark {
   background: none;
 }
-
-/* h1 {
-  animation: test 3.5s steps(40, end);
+.carousel_arrows {
+  cursor: pointer;
 }
 
-@keyframes test {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.carousel_left_arrow svg {
+  transition: transform 400ms;
 }
-
-.h1c {
-  animation: 1s ease-out 0s 1 test;
-} */
+.carousel_left_arrow:hover svg {
+  transform: translate(-0.5em, 0) scaleX(1.05);
+}
+.carousel_right_arrow svg {
+  transition: transform 400ms;
+}
+.carousel_right_arrow:hover svg {
+  transform: translate(0.5em, 0) scaleX(1.05);
+}
