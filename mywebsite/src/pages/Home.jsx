@@ -36,7 +36,7 @@ function Home() {
       <div className="px-3 md:w-3/4 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
         <ContentBlock
           header="Hi, I'm Hunter"
-          headerClasses="text-basic-h text-3xl"
+          headerClasses="text-basic-h text-3xl h1c"
           text="I'm a Developer from Adelaide, South Australia and Software
               Engineering (Hons) graduate from the University of South
               Australia, 2021. I'm mostly experienced in Web Development, but

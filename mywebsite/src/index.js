@@ -2,13 +2,17 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
-import CoolStuff from "./pages/CoolStuff";
 import Work from "./pages/Work";
 import Blog from "./pages/Blog";
 import "./styles/css/index.css";
 import { createRoot } from "react-dom/client";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faAt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAt,
+  faArrowRightLong,
+  faArrowLeftLong,
+} from "@fortawesome/free-solid-svg-icons";
+import Interests from "./pages/Interests";
 
 export default function App() {
   return (
@@ -18,7 +22,7 @@ export default function App() {
           <Route index element={<Home />} />
           <Route path="blogs" element={<Blog />} />
           <Route path="work" element={<Work />} />
-          <Route path="coolstuff" element={<CoolStuff />} />
+          <Route path="interests" element={<Interests />} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>
@@ -26,7 +30,7 @@ export default function App() {
   );
 }
 
-library.add(faAt);
+library.add(faAt, faArrowRightLong, faArrowLeftLong);
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App />);

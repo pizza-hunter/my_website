@@ -1,6 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import "hamburgers/dist/hamburgers.css";
+
+// TODO: Close mobile navbar when link is clicked
 
 class Navbar extends React.Component {
   constructor(props) {
@@ -60,7 +62,7 @@ class Navbar extends React.Component {
       <ul className="">
         <NavItem link="/blogs" text="Blogs" />
         <NavItem link="/work" text="Work" />
-        <NavItem link="/coolstuff" text="Cool Stuff" />
+        <NavItem link="/interests" text="Interests" />
       </ul>
     );
     // Condition for showing/hiding nav in mobile view
@@ -93,7 +95,7 @@ class Navbar extends React.Component {
           </div>
           <div
             ref={this.wrapperRef}
-            className="text-right fixed right-0 md:flex md:justify-between md:text-center md:relative md:h-auto"
+            className="text-right relative z-10  md:flex md:justify-between md:text-center md:relative md:h-auto"
           >
             {button}
             {nav}
@@ -121,7 +123,7 @@ const NavItem = (props) => {
 // Mobile Nav tab toggle visibility button
 const ToggleButton = (props) => {
   return (
-    <div className="bg-basic-a fixed top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
+    <div className="bg-basic-a absolute top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
       <button
         className={"hamburger hamburger--collapse " + props.active}
         type="button"

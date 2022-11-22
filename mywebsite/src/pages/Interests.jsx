@@ -1,6 +1,6 @@
 import React from "react";
 
-function CoolStuff() {
+function Interests() {
   return (
     <div>
       <h1>Hopefully coming soon containing the following stuff </h1>
@@ -13,4 +13,4 @@ function CoolStuff() {
   );
 }
 
-export default CoolStuff;
+export default Interests;
