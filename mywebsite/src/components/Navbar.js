@@ -62,7 +62,7 @@ class Navbar extends React.Component {
       <ul className="">
         <NavItem link="/blogs" text="Blogs" />
         <NavItem link="/work" text="Work" />
-        <NavItem link="/coolstuff" text="Cool Stuff" />
+        <NavItem link="/interests" text="Interests" />
       </ul>
     );
     // Condition for showing/hiding nav in mobile view
