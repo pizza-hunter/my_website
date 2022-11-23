@@ -15,34 +15,36 @@ class ProjectSlide extends React.Component {
       <div
         id="slideWrap"
         className={
-          this.props.slideDirection + " grid w-full left-0 absolute top-0 "
+          this.props.slideDirection +
+          " " +
+          "grid w-full left-0 absolute top-0 md:grid-cols-2 md:flex-col-reverse"
         }
       >
         <div
           id="title"
-          className="h-full grid border-t-2 text-center justify-center content-center"
+          className="h-full grid text-center justify-center content-center md:border-r-0 md:text-left md:justify-start md:pl-20 md:border"
         >
-          <h3 className="text-3xl">{this.props.header}</h3>
+          <h3 className="text-3xl md:text-5xl">{this.props.header}</h3>
         </div>
         <div
           id="picture"
-          className=" border-t-2 py-2 grid justify-center content-center"
+          className="py-2 grid justify-center content-center md:border-r-0 md:border md:border-b-0"
         >
           <img
-            className="max-h-64 object-cover"
+            className="max-h-80 object-cover"
             src={this.props.image}
             alt={this.props.alt}
           ></img>
         </div>
         <div
           id="description"
-          className="h-full border-t-2 px-2 grid justify-center content-center"
+          className="h-full px-4 grid justify-center content-center md:content-end md:pb-10 md:border md:border-b-0"
         >
           <p className="text-lg">{this.props.description}</p>
         </div>
         <div
           id="techs"
-          className="h-full border-t-2 pb-4 grid grid-cols-2 px-4 items-center"
+          className="h-full pb-4 grid grid-cols-2 px-4 items-center md:border"
         >
           {techs}
         </div>

@@ -211,9 +211,6 @@ mark {
 .carousel_right_arrow:active svg {
   transform: translate(0.5em, 0) scaleX(1.05);
 }
-/* .project_slide {
-  width: 1280px;
-} */
 
 .slide_left {
   animation-duration: 0.9s;
@@ -257,7 +254,25 @@ main {
   height: 80vh;
 }
 
+@media (min-width: 768px) {
+  #slideWrap {
+    grid-template-columns: 1.7fr 1fr;
+  }
+  #title {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  #picture img {
+    max-height: 30rem;
+  }
+  /* #description {
+  }
+  #techs {
+  } */
+}
+@media (min-width: 0px) {
+}
+
 #slideWrap {
   height: 90%;
-  grid-template-rows: 0.5fr 1.7fr 1fr 1.1fr;
 }

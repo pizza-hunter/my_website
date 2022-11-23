@@ -22,13 +22,13 @@ function Work() {
   }
   return (
     <div className="md:flex md:justify-center ">
-      <div className="px-3 md:w-3/4 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
+      <div className="px-3 md:mx-6 md:w-full trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
         <ContentBlock
           header="Work and Projects"
           headerClasses="text-basic-h text-3xl"
           text="A collection of some of the projects i've worked on including webpages, web applications, and mobile applications"
         />
-        <main className="flex mt-10 border-x-2 mb-4">
+        <main className="flex mt-10 mb-4">
           <Carousel slides={projectBlocks}></Carousel>
         </main>
       </div>

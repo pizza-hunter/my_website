@@ -37,26 +37,26 @@ export class Carousel extends React.Component {
       { slideDirection: this.state.slideDirection }
     );
     return (
-      <div className="carousel relative flex-grow">
-        {clonedSlide}
-
+      <div className="carousel relative flex-grow grid">
         <div
           onClick=""
-          className=" absolute bottom-0 flex w-full text-5xl justify-center align-middle text-center carousel_arrows"
+          className="absolute bottom-0 flex w-full text-5xl justify-center align-middle text-center carousel_arrows"
         >
+          {/* TODO: left arrow causes screen jutter on mobile */}
           <div
-            className="w-full border-y-2 py-3 carousel_left_arrow"
+            className="w-full border py-3 carousel_left_arrow "
             onClick={this.handleDecrement}
           >
             <FontAwesomeIcon icon="arrow-left-long" className="" />
           </div>
           <div
-            className="w-full border-y-2 border-l-2 py-3 carousel_right_arrow"
+            className="w-full border py-3 carousel_right_arrow"
             onClick={this.handleIncrement}
           >
             <FontAwesomeIcon icon="arrow-right-long" className="" />
           </div>
         </div>
+        {clonedSlide}
       </div>
     );
   }
