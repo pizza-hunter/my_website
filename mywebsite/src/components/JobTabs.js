@@ -69,13 +69,15 @@ class JobHeader extends React.Component {
   };
   render() {
     return (
-      <div
-        className={
-          this.props.active +
-          " bg-basic-l text-basic-a text-lg py-1 px-5 mr-1 rounded-t-lg md:mr-0 md:mb-1 md:rounded-t-none md:rounded-l-lg md:py-1"
-        }
-      >
-        <button value={this.props.value} onClick={this.props.onHeaderClick}>
+      <div>
+        <button
+          value={this.props.value}
+          onClick={this.props.onHeaderClick}
+          className={
+            this.props.active +
+            " bg-basic-l w-full text-basic-a text-lg py-1 px-5 mr-1 rounded-t-lg md:mr-0 md:mb-1 md:rounded-t-none md:rounded-l-lg md:py-1"
+          }
+        >
           {this.props.title}
         </button>
       </div>
