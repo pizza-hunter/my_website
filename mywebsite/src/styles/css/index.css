@@ -17,18 +17,23 @@ body {
     "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(53, 94, 59);
-  background: linear-gradient(
+  background: rgb(24, 31, 26);
+  /* background: linear-gradient(
     328deg,
     rgba(53, 94, 59, 1) 35%,
     rgba(138, 203, 136, 1) 100%
-  );
+  ); */
   background-repeat: no-repeat;
   color: white;
   min-height: 100vh;
 }
 #root {
   max-width: 1248px;
+  --basic: #355e3b;
+  --basic-l: #8acb88;
+  --basic-a: #e4fde1;
+  --basic-h: #dba159;
+  --basic-y: #ffbf46;
 }
 .trial {
   background: rgb(49, 48, 55);
@@ -275,4 +280,20 @@ main {
 
 #slideWrap {
   height: 90%;
+}
+
+.text-shadow-basic {
+  text-shadow: 3px 2px var(--basic);
+}
+.text-shadow-basic-a {
+  text-shadow: 3px 2px var(--basic-a);
+}
+.text-shadow-basic-h {
+  text-shadow: 3px 2px var(--basic-h);
+}
+.text-shadow-basic-l {
+  text-shadow: 3px 2px var(--basic-l);
+}
+.text-shadow-basic-y {
+  text-shadow: 3px 2px var(--basic-y);
 }

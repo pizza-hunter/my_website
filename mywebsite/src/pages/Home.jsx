@@ -6,18 +6,35 @@ import jobs from "../data/JobsData";
 
 function Home() {
   return (
-    <div className="md:flex md:justify-center ">
-      <div className="px-3 mx-6 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h">
-        <ContentBlock
-          header="Hi, I'm Hunter"
-          headerClasses="text-basic-h text-3xl h1c"
-          text="I'm a Developer from Adelaide, South Australia and Software
-              Engineering (Hons) graduate from the University of South
-              Australia, 2021. I'm mostly experienced in Web Development, but
-              I'm also keenly interested in software engineering."
-        />
-
-        <ContentBlock header="My Experience" />
+    <div className="md:flex md:justify-center">
+      {/* <div className=" px-10 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h"> */}
+      <div className="">
+        <div className="flex align-middle pt-64 md:pb-3">
+          <ContentBlock
+            header="Hi, I'm Hunter"
+            headerClasses="text-basic-h text-5xl text-shadow-basic"
+            text="I'm a Developer and amateur designer based in Adelaide, and recent graduate from the University of South Australia. I love exploring new programming
+             languages and learning what they bring to the table."
+            blockClasses="md:w-5/6"
+            textClasses="pt-10 text-2xl leading-10"
+          />
+          <p className="leading-"></p>
+          <img
+            className="w-52 h-52 rounded-lg border-2 shadow-lg shadow-black"
+            src="./images/profilepic.jpg"
+            alt="Hunter Green profile shot"
+          ></img>
+        </div>
+        <div className="flex pt-10 justify-evenly">
+          <div className="md:border-b md:w-1/12 "></div>
+          <div className="md:w-1/12 "></div>
+          <div className="md:border-b md:w-2/3 "></div>
+          <div className="md:w-1/12 "></div>
+          <div className="md:border-b md:w-2/3 "></div>
+          <div className="md:w-1/12 "></div>
+          <div className="md:border-b md:w-1/12 "></div>
+        </div>
+        <ContentBlock header="My Experience" blockClasses="pt-64" />
         <JobTabs jobs={jobs} />
         <ContentBlock
           blockClasses="pt-10"
@@ -35,11 +52,6 @@ function Home() {
           <div className="">
             <div className="flex justify-between">
               <h1 className="text-3xl text-center">More about me</h1>
-              <img
-                className="w-20 h-20 rounded-full  border-2"
-                src="./images/profilepic.jpg"
-                alt="Hunter Green profile shot"
-              ></img>
             </div>
             <div className="pt-5">
               <div className="flex">
