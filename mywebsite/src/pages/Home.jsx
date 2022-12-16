@@ -5,6 +5,7 @@ import ContentBlock from "../components/ContentBlock";
 import jobs from "../data/JobsData";
 import Linebreak from "../components/Linebreak";
 import CarDriving from "../components/CarDriving";
+import CallToAction from "../components/CallToAction";
 
 function Home() {
   return (
@@ -46,19 +47,12 @@ function Home() {
         />
         <JobTabs jobs={jobs} />
         <Linebreak />
-        <div className="bg-basic-h rounded-3xl mt-28">
-          <ContentBlock
-            blockClasses="px-3"
-            header="Check out my CV"
-            headerClasses="text-basic-l text-5xl lg:text-6xl text-shadow-basic text-center pt-10"
-            text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
-            textClasses="text-center pt-10 lg:px-40 text-xl"
-          />
-          <div className="py-8 flex justify-evenly">
-            <ButtonLink text="Resume" link="HunterGreen.pdf" />
-            {/* <ButtonLink text="GitHub" link="https://github.com/pizza-hunter" /> */}
-          </div>
-        </div>
+        <CallToAction
+          header="Check out my CV"
+          text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
+          link="HunterGreen.pdf"
+          linkText="Resume"
+        />
 
         <div className="pt-16 md:flex md:justify-center">
           <div className="">
