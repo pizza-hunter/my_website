@@ -3,49 +3,61 @@ import JobTabs from "../components/JobTabs";
 import ButtonLink from "../components/ButtonLink";
 import ContentBlock from "../components/ContentBlock";
 import jobs from "../data/JobsData";
+import Linebreak from "../components/Linebreak";
+import CarDriving from "../components/CarDriving";
 
 function Home() {
   return (
-    <div className="md:flex md:justify-center">
-      {/* <div className=" px-10 trial rounded-lg border-r-4 border-b-4 border-double border-basic-h"> */}
+    <div className="md:flex md:justify-center px-5 md:px-10 overflow-x-hidden">
       <div className="">
-        <div className="flex align-middle pt-64 md:pb-3">
-          <ContentBlock
-            header="Hi, I'm Hunter"
-            headerClasses="text-basic-h text-5xl text-shadow-basic"
-            text="I'm a Developer and amateur designer based in Adelaide, and recent graduate from the University of South Australia. I love exploring new programming
-             languages and learning what they bring to the table."
-            blockClasses="md:w-5/6"
-            textClasses="pt-10 text-2xl leading-10"
-          />
-          <p className="leading-"></p>
+        <div className="pt-20 md:flex md:pt-64 md:pb-3">
+          <div className="md:w-5/6">
+            <h2 className="text-basic-h text-5xl text-shadow-basic">
+              Hi, I'm Hunter
+            </h2>
+            <p className="pt-10 text-2xl leading-10">
+              I'm a Developer and amateur designer based in{" "}
+              <span className="text-basic-h underline underline-offset-4 decoration-basic-l hover:text-basic-l hover:decoration-basic-h duration-500">
+                Adelaide
+              </span>
+              , and recent graduate from the{" "}
+              <span className="text-basic-l underline underline-offset-4 decoration-basic-h hover:text-basic-h hover:decoration-basic-l duration-500">
+                University of South Australia.
+              </span>{" "}
+              I love exploring new programming languages and learning what they
+              bring to the table. Have a look at some of my{" "}
+              <a className="linkText text-3xl" href="/work">
+                Previous Projects.
+              </a>
+            </p>
+          </div>
           <img
-            className="w-52 h-52 rounded-lg border-2 shadow-lg shadow-black"
+            className="hidden lg:block w-32 h-32 md:w-52 md:h-52 rounded-lg border-2 shadow-lg shadow-black"
             src="./images/profilepic.jpg"
             alt="Hunter Green profile shot"
           ></img>
         </div>
-        <div className="flex pt-10 justify-evenly">
-          <div className="md:border-b md:w-1/12 "></div>
-          <div className="md:w-1/12 "></div>
-          <div className="md:border-b md:w-2/3 "></div>
-          <div className="md:w-1/12 "></div>
-          <div className="md:border-b md:w-2/3 "></div>
-          <div className="md:w-1/12 "></div>
-          <div className="md:border-b md:w-1/12 "></div>
-        </div>
-        <ContentBlock header="My Experience" blockClasses="pt-64" />
-        <JobTabs jobs={jobs} />
+        <Linebreak />
+        <CarDriving />
         <ContentBlock
-          blockClasses="pt-10"
-          header="Check out my CV"
-          headerClasses="text-3xl text-center pt-5"
-          text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
-          textClasses="text-center pt-5"
+          header="My Experience"
+          headerClasses="text-basic-a text-5xl text-shadow-basic"
+          blockClasses="pt-24"
         />
-        <div className="py-8 flex justify-evenly">
-          <ButtonLink text="Resume" link="HunterGreen.pdf" />
-          <ButtonLink text="GitHub" link="https://github.com/pizza-hunter" />
+        <JobTabs jobs={jobs} />
+        <Linebreak />
+        <div className="bg-basic-h rounded-3xl mt-28">
+          <ContentBlock
+            blockClasses="px-3"
+            header="Check out my CV"
+            headerClasses="text-basic-l text-5xl lg:text-6xl text-shadow-basic text-center pt-10"
+            text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
+            textClasses="text-center pt-10 lg:px-40 text-xl"
+          />
+          <div className="py-8 flex justify-evenly">
+            <ButtonLink text="Resume" link="HunterGreen.pdf" />
+            {/* <ButtonLink text="GitHub" link="https://github.com/pizza-hunter" /> */}
+          </div>
         </div>
 
         <div className="pt-16 md:flex md:justify-center">

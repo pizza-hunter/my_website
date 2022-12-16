@@ -271,12 +271,6 @@ main {
   #picture img {
     max-height: 30rem;
   }
-  /* #description {
-  }
-  #techs {
-  } */
-}
-@media (min-width: 0px) {
 }
 
 #slideWrap {
@@ -297,4 +291,48 @@ main {
 }
 .text-shadow-basic-y {
   text-shadow: 3px 2px var(--basic-y);
+}
+
+#car {
+  animation-name: drive;
+  animation-duration: 0.6s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+  animation-delay: calc(var(--scroll) * -1s);
+  animation-fill-mode: both;
+}
+
+@media (min-width: 768px) {
+  #car {
+    animation-duration: 1.2s;
+  }
+}
+
+@keyframes drive {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+#road {
+  margin-top: -20px;
+}
+
+@media (min-width: 768px) {
+  #road {
+    margin-top: -40px;
+  }
+}
+
+.linkText {
+  color: var(--basic-y);
+}
+.linkText:hover {
+  background-color: #355e3b;
+  border-radius: 5px;
+  transition: ease-in-out;
+  transition-duration: 300ms;
 }
