@@ -75,7 +75,7 @@ class Navbar extends React.Component {
       );
     } else {
       nav = (
-        <div className="w-0 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 md:inline-block md:self-end md:px-2 md:mx-2 md:text-xl md:relative md:w-auto md:h-auto">
+        <div className="w-0 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 md:inline-block md:self-end md:px-2 md:mx-2 md:text-xl md:relative md:w-auto md:h-auto md:pr-10">
           {navItems}
         </div>
       );
@@ -87,7 +87,7 @@ class Navbar extends React.Component {
             <Link to="/">
               <h1
                 id="pageHeader"
-                className="text-6xl font-semibold pt-10 md:whitespace-nowrap duration-500 md:hover:-translate-y-1 "
+                className="text-6xl font-semibold md:pt-10 pt-20 md:whitespace-nowrap duration-500 md:hover:-translate-y-1 px-5 md:pl-10"
               >
                 {titleSpans}
               </h1>
