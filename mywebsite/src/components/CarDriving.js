@@ -1,6 +1,10 @@
+/*
+    Decorative element that displays a car driving along a road equivalent to the 
+    scrolling distance of the user (hidden on smaller devices)
+*/
 function CarDriving() {
   return (
-    <div>
+    <div className="hidden md:block">
       <div className="flex gap-1 overflow-x-hidden pt-20">
         <img
           alt="buildings decoration"
