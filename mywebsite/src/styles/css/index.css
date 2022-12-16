@@ -30,6 +30,7 @@ body {
 #root {
   max-width: 1248px;
   --basic: #355e3b;
+  --basic-d: #1e3021;
   --basic-l: #8acb88;
   --basic-a: #e4fde1;
   --basic-h: #dba159;
