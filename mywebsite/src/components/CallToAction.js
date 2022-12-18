@@ -1,32 +1,28 @@
-import ButtonLink from "./ButtonLink";
+import React, { Children } from "react";
 
 /*
-    Call to action element
+    Call to action element, child element can be nested within
     @param: header - heading text
     @param: text - main text
-    @param: link - button link
-    @param: linkText - Link to be displayed on button
 */
 function CallToAction(props) {
   // Display button if defined
-  if (props.link !== undefined && props.linkText !== undefined) {
-    var button = (
-      <div class="pb-8 flex justify-evenly">
-        <ButtonLink link={props.link} text={props.linkText} />
-      </div>
+  if (props.children !== undefined) {
+    var child = (
+      <div className="pb-8 flex justify-evenly">{props.children}</div>
     );
   }
 
   return (
     <div className="bg-basic-h rounded-3xl mt-28">
-      <div class="px-3">
-        <div class="px-3 pb-10">
-          <h1 class="text-basic-l text-5xl lg:text-6xl text-shadow-basic text-center pt-10">
+      <div className="px-3">
+        <div className="px-3 pb-10">
+          <h1 className="text-basic-l text-5xl lg:text-6xl text-shadow-basic text-center pt-10">
             {props.header}
           </h1>
-          <p class="text-center pt-10 lg:px-40 text-2xl">{props.text}</p>
+          <p className="text-center pt-10 lg:px-40 text-2xl">{props.text}</p>
         </div>
-        {button}
+        {child}
       </div>
     </div>
   );
