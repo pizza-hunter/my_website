@@ -30,14 +30,14 @@ class JobTabs extends React.Component {
   render() {
     var currentJob = this.state.jobs[this.state.index];
     var activeTab = "";
-    var headers = this.props.jobs.map((job, it) => {
-      it == this.state.index
+    var tabs = this.props.jobs.map((job, i) => {
+      i == this.state.index
         ? (activeTab = "active-job-tab")
         : (activeTab = " ");
       return (
         <JobHeader
-          key={it}
-          value={it}
+          key={i}
+          value={i}
           onHeaderClick={this.handleSelect}
           title={job.shortName}
           active={activeTab}
@@ -50,7 +50,7 @@ class JobTabs extends React.Component {
           id="accordionNav"
           className="flex border-b-2 border-b-basic-h md:block md:border-b-0 md:border-r-2 md:border-r-basic-h"
         >
-          {headers}
+          {tabs}
         </div>
         <div id="accordionBody" className="md:pl-5">
           <JobBody
