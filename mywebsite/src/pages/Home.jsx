@@ -52,14 +52,18 @@ function Home() {
           text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
           link="HunterGreen.pdf"
           linkText="Resume"
-        />
+        >
+          <ButtonLink link="HunterGreen.pdf" text="Resume" colour="dark" />
+        </CallToAction>
 
-        <div className="pt-16 md:flex md:justify-center">
+        <div className="pt-24 md:flex md:justify-center">
           <div className="">
             <div className="flex justify-between">
-              <h1 className="text-3xl text-center">More about me</h1>
+              <h1 className="text-basic-a text-5xl text-shadow-basic">
+                More about me
+              </h1>
             </div>
-            <div className="pt-5">
+            <div className="pt-10 text-xl leading-9">
               <div className="flex">
                 <h1>
                   I've always enjoyed creating things{" "}
@@ -105,13 +109,21 @@ function Home() {
           </div>
         </div>
         <ContentBlock
-          header="Contact Me"
+          blockClasses="pt-16 md:pt-24"
+          header="Get in touch"
           text="I'm not currently looking for work at the moment but my inbox is always open if you have any
         questions or just want to say hi."
+          headerClasses="text-basic-a text-5xl text-shadow-basic"
+          textClasses="text-xl pt-10"
         />
-        <div className="py-8 flex justify-center">
-          <ButtonLink text="Hit me up" link="mailto:huntergreenaus@gmail.com" />
+        <div className="py-8 pt-16 flex justify-center">
+          <ButtonLink
+            text="Hit me up"
+            link="mailto:huntergreenaus@gmail.com"
+            colour="accent"
+          />
         </div>
+        <Linebreak />
       </div>
     </div>
   );
