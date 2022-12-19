@@ -47,6 +47,7 @@ function Home() {
         />
         <JobTabs jobs={jobs} />
         <Linebreak />
+        <div className="xl:pt-32"></div>
         <CallToAction
           header="Check out my CV"
           text="Want to learn more about my work experience? Have a look at my resume in the link below, last updated as of 8/22"
@@ -55,6 +56,7 @@ function Home() {
         >
           <ButtonLink link="HunterGreen.pdf" text="Resume" colour="dark" />
         </CallToAction>
+        <div className="xl:pt-32"></div>
 
         <div className="pt-24 md:flex md:justify-center">
           <div className="">
