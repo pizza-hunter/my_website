@@ -12,6 +12,8 @@ import {
   faArrowRightLong,
   faArrowLeftLong,
 } from "@fortawesome/free-solid-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
 import Interests from "./pages/Interests";
 
 export default function App() {
@@ -30,7 +32,7 @@ export default function App() {
   );
 }
 
-library.add(faAt, faArrowRightLong, faArrowLeftLong);
+library.add(faAt, faArrowRightLong, faArrowLeftLong, faGithub, faLinkedin);
 const container = document.getElementById("root");
 const root = createRoot(container);
 root.render(<App />);
