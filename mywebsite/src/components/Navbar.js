@@ -2,8 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "hamburgers/dist/hamburgers.css";
 
-// TODO: Close mobile navbar when link is clicked
-
 class Navbar extends React.Component {
   constructor(props) {
     super(props);
@@ -72,16 +70,16 @@ class Navbar extends React.Component {
     );
     let navItems = (
       <ul className="">
-        <NavItem link="/blogs" text="Blogs" />
-        <NavItem link="/work" text="Work" />
-        <NavItem link="/interests" text="Interests" />
+        <NavTab onClick={this.toggle} link="/blogs" text="Blogs" />
+        <NavTab onClick={this.toggle} link="/work" text="Work" />
+        <NavTab onClick={this.toggle} link="/interests" text="Interests" />
       </ul>
     );
     // Condition for showing/hiding nav in mobile view
     if (visible) {
       nav = (
         <div className="w-52 text-3xl h-screen fixed top-0 right-0 overflow-x-hidden duration-500 bg-basic-l pt-20 pl-5">
-          <NavItem link="/" text="Home" />
+          <NavTab onClick={this.toggle} link="/" text="Home" />
           {navItems}
         </div>
       );
@@ -117,11 +115,11 @@ class Navbar extends React.Component {
     );
   }
 }
-// Individual Nav tab
-const NavItem = (props) => {
+
+const NavTab = (props) => {
   return (
     <div className="pt-3 md:inline-block md:pt-0 md:overflow-hidden">
-      <Link to={props.link}>
+      <Link to={props.link} onClick={props.onClick}>
         <div className=" pt-2 pb-1 pl-5 pr-4 hover:bg-basic rounded-md md:pt-0 md:pb-2 md:hover:bg-basic-l md:hover:bg-opacity-20 md:hover:translate-y-2 md:duration-300">
           <li className="ease-in duration-600 border-b-2 border-b-slate-200 md:border-none md:text-2xl lg:text-3xl list-none">
             {props.text}
@@ -132,8 +130,7 @@ const NavItem = (props) => {
   );
 };
 
-// Mobile Nav tab toggle visibility button
-const ToggleButton = (props) => {
+const MobileNavToggleButton = (props) => {
   return (
     <div className="bg-basic-a absolute top-0 right-0 w-20 h-16 rounded-bl-full z-20 md:hidden md:h-0 md:w-0">
       <button
