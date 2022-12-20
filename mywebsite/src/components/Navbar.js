@@ -36,20 +36,10 @@ class Navbar extends React.Component {
     });
   };
 
-  render() {
-    const visible = this.state.visible;
-    let nav;
-    var activeV = this.state.visible ? "is-active" : "";
-    const title = "Hunter Green";
+  createTitlespans(title) {
     let titleSpans = [];
-    // Coloured Title
     for (let i = 0; i < title.length; i++) {
-      let titleSpan;
-      i % 3 === 0
-        ? (titleSpan = "")
-        : i % 3 === 1
-        ? (titleSpan = "a")
-        : (titleSpan = "h");
+      let titleSpan = this.determineSpanColour(i);
 
       titleSpans[i] = (
         <span key={i} className={"h-t-" + titleSpan}>
@@ -57,7 +47,29 @@ class Navbar extends React.Component {
         </span>
       );
     }
-    let button = <ToggleButton onClick={this.toggle} active={activeV} />;
+    return titleSpans;
+  }
+
+  determineSpanColour(i) {
+    switch (i % 3) {
+      case 1:
+        return "a";
+      case 2:
+        return "h";
+      default:
+        return "";
+    }
+  }
+
+  render() {
+    const visible = this.state.visible;
+    let nav;
+    var activeV = this.state.visible ? "is-active" : "";
+    const title = "Hunter Green";
+    let titleSpans = this.createTitlespans(title);
+    let button = (
+      <MobileNavToggleButton onClick={this.toggle} active={activeV} />
+    );
     let navItems = (
       <ul className="">
         <NavItem link="/blogs" text="Blogs" />
