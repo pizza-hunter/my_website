@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 // TODO: Fix jumping increment, sometimes skips forward or back if clicking too fast
-// potentially coudld try to invoke a blocking period during future animation\
+// potentially coudld try to invoke a blocking period during future animation
 
 export class Carousel extends React.Component {
   constructor(props) {
@@ -38,19 +38,16 @@ export class Carousel extends React.Component {
     );
     return (
       <div className="carousel relative flex-grow grid">
-        <div
-          onClick=""
-          className="absolute bottom-0 flex w-full text-5xl justify-center align-middle text-center carousel_arrows"
-        >
+        <div className="absolute bottom-0 flex w-full text-5xl justify-center align-middle text-center carousel_arrows">
           {/* TODO: left arrow causes screen jutter on mobile */}
           <div
-            className="w-full border py-3 carousel_left_arrow "
+            className="w-full border rounded-3xl py-3 carousel_left_arrow "
             onClick={this.handleDecrement}
           >
             <FontAwesomeIcon icon="arrow-left-long" className="" />
           </div>
           <div
-            className="w-full border py-3 carousel_right_arrow"
+            className="w-full border py-3 rounded-3xl carousel_right_arrow"
             onClick={this.handleIncrement}
           >
             <FontAwesomeIcon icon="arrow-right-long" className="" />
