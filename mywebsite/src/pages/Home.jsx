@@ -127,7 +127,7 @@ const MoreAboutMeBlock = () => {
               Outside of work I watch movies, cook mostly curry and pasta,
               listen to music, play games, and play semi-amatuer tennis.{" "}
               <mark className="text-basic-l italic ">
-                <a href="/coolStuff">Some of my favourites can be found here</a>
+                <a href="/interests">Some of my favourites can be found here</a>
               </mark>
             </p>
           </div>
