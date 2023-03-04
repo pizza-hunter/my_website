@@ -29,9 +29,11 @@ class Navbar extends React.Component {
   }
 
   toggle = () => {
-    this.setState({
-      visible: !this.state.visible,
-    });
+    if (window.innerWidth <= 768) {
+      this.setState({
+        visible: !this.state.visible,
+      });
+    }
   };
 
   createTitlespans(title) {
@@ -70,7 +72,6 @@ class Navbar extends React.Component {
     );
     let navItems = (
       <ul className="">
-        <NavTab onClick={this.toggle} link="/blogs" text="Blogs" />
         <NavTab onClick={this.toggle} link="/work" text="Work" />
         <NavTab onClick={this.toggle} link="/interests" text="Interests" />
       </ul>
