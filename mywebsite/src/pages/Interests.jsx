@@ -1,14 +1,22 @@
 import React from "react";
+import ContentBlock from "../components/ContentBlock";
+import InterestsBlock from "../components/InterestsBlock";
 
 function Interests() {
   return (
-    <div>
-      <h1>Hopefully coming soon containing the following stuff </h1>
-      <h1>Movies</h1>
-      <h1>Games</h1>
-      <h1>Articles</h1>
-      <h1>Books</h1>
-      <h1>Music</h1>
+    <div className="md:flex md:justify-center px-5 md:px-10 overflow-x-hidden">
+      <div>
+        <div className="md:pt-16">
+          <ContentBlock
+            headerClasses={"text-basic-h text-shadow-basic text-5xl"}
+            header={"Interests"}
+            text={`For whatever reason that you'd care to know my interests in media,
+               and anything else I decide to include here they are!`}
+            textClasses={"text-xl pt-10"}
+          />
+        </div>
+        <InterestsBlock />
+      </div>
     </div>
   );
 }

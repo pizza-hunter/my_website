@@ -2,13 +2,13 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import LinkBar from "../components/LinkBar";
+import SocialLinksLg from "../components/SocialLinksLg";
 
 const Layout = () => {
   return (
     <>
       <Navbar />
-      <LinkBar />
+      <SocialLinksLg />
       <Outlet />
       <Footer />
     </>

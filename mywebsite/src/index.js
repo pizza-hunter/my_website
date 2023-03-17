@@ -3,7 +3,6 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NoPage from "./pages/NoPage";
 import Work from "./pages/Work";
-import Blog from "./pages/Blog";
 import "./styles/css/index.css";
 import { createRoot } from "react-dom/client";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -22,7 +21,6 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="blogs" element={<Blog />} />
           <Route path="work" element={<Work />} />
           <Route path="interests" element={<Interests />} />
           <Route path="*" element={<NoPage />} />
